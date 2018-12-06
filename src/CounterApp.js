@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-// 7.
+// 8.
 import { connect } from 'react-redux'
 
 class CounterApp extends Component {
@@ -10,12 +10,12 @@ class CounterApp extends Component {
     }
   }*/
   // the ABOVE is the same as the BELOW
-// 9. can be remove b/c we are now mapping our state from the store 
+// 10. can be remove b/c we are now mapping our state from the store 
   /*state = {
     counter: 0
   }*/
 
-// 13.
+// 14.
 // we can remove the methods as they will be redone in mapDispatchToProps()
   /*increaseCounter = () => {
     this.setState({ counter: this.state.counter + 1 })
@@ -26,7 +26,7 @@ class CounterApp extends Component {
   }*/
 
   render() {
-// 12.
+// 13.
 // change {() => this.increaseCounter()} to {() => this.props.increaseCounter()}>
     return (
       <div>
@@ -38,7 +38,7 @@ class CounterApp extends Component {
   }
 }
 
-// 6.
+// 7.
 // to allow complete access to the Store in CounterApp we need to map the 
 // state to the props, which takes an argument of state. It's getting the 
 // state.counter from the store and mapping it to a prop called counter
@@ -48,7 +48,7 @@ function mapStateToProps(state) {
   }
 }
 
-// 10.
+// 11.
 // Pass in Actions to modify the state
 function mapDispatchToProps(dispatch) {
   // the Actions are dispatched to the Reducer
@@ -58,8 +58,8 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-// 8.
+// 9.
 // connect mapStateToProps to CounterApp
-// 11.
+// 12.
 // connect mapDispatchToProps to CounterApp
 export default connect(mapStateToProps, mapDispatchToProps)(CounterApp)

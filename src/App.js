@@ -1,6 +1,7 @@
 import React, { Component } from "react"
+// 1.
 import { createStore } from 'redux'
-// 4.
+// 5.
 import { Provider } from 'react-redux'
 import CounterApp from './CounterApp'
 
@@ -30,18 +31,18 @@ import CounterApp from './CounterApp'
   IV. The Reducer modifies the Store and returns us an updated state.
 */
 
-// 3.
+// 4.
 // for the Reducer to be able to modify the state it needs to have access to 
 // the initial state, so pass the initial state (initialState) to the Reducer
 const initialState = {
   counter: 0
 }
 
-// 2.
+// 3.
 // the Reducer
 //  - can modify our Store, but only when an Action is passed to it as the
 //  second argument
-// 14.
+// 15.
 // add the 2nd argument to the Reducer -- action, then we run a switch statement
 // to check the Action type (action.type), and if a case is matched, we either
 // increase or decrease the state counter
@@ -54,14 +55,14 @@ const reducer = (state = initialState,action) => {
   return state
 }
 
-// 1.
+// 2.
 // the Store:
 //  - needs a Reducer to be able to access it and modify the state
 //  - so need to pass it the Reducer as an argument
 const store = createStore(reducer)
 
 class App extends Component {
-  // 5.
+  // 6.
   // pass our Store to the Provider to connect our Store to React
   render() {
     return (
